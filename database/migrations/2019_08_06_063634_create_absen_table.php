@@ -16,20 +16,11 @@ class CreateAbsenTable extends Migration
         Schema::create('absen', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id');
+            $table->string('siswa_id');
             $table->date('date');
             $table->time('time_in');
             $table->time('time_out');
             $table->text('keterangan');
-            $table->timestamps();
-
-        });
-
-        Schema::create('users', function(Blueprint $table) {
-
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
             $table->timestamps();
 
         });
