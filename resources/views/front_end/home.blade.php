@@ -1,26 +1,13 @@
+@if(Auth::user()->hasRole('member')) 
 
-@extends('front_end.layout.master')
-@section('home', 'active')
-
-@section('content')
-
-
-@extends('front_end.layout.navbar')
-
-
-@if(!Auth::user()->hasRole('member')) 
-
-    <!-- Halaman Admin -->
-
-    @include('front_end.admin.index')
+    <!-- Halaman member -->
+    @include('front_end.layout.navbar')
+    @include('front_end.member.index')
 
 @else 
 
-    <!-- Halaman Member -->
-
-    @include('front_end.member.index')
-    
-@endsection
+    <!-- Halaman admin -->
+    @include('front_end.admin.index')
 
 @endif
 

@@ -13,23 +13,24 @@
 
 	
 
-Auth::routes(['reset' => false]);
-
-Route::group(['middleware' => ['auth']], function () {
+Auth::routes();
 
 
-	// Root Home
-		Route::get('/', function () {
-			    return view('front_end.home');
-		});
+Route::group(['middleware' => ['auth']], function () {		
 
-				Route::get('/home', function () {
-			    return view('front_end.home');
-		});
+	Route::get('/', function () {
+		return redirect('/home');
+	});  
+
+	Route::get('/home', function () {
+	    return view('front_end.home');
+	});
+
+	Route::post('/absen', 'AbsenController@absen')->name('absen');
 
 	// Route khusus untuk member
 	Route::group(['middleware' => ['role:member']], function () {
-
+		
 		include('web_mod/member.php');
 
 	});

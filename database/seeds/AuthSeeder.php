@@ -13,10 +13,10 @@ class AuthSeeder extends Seeder
      */
     public function run()
     {
-        $roles = ['admin', 'member'];
+        $roles = ['member', 'admin'];
         $role = [
-        	'admin' => null,
-        	'member' => null
+        	'member' => null,
+        	'admin' => null
         ];
 
         // Seed Role Data

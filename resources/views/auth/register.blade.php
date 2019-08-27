@@ -2,7 +2,6 @@
 @section('home', 'active')
 
 @section('content')
-
 <body class="hold-transition register-page">
     <div class="register-box">
       <div class="register-box-body">
@@ -73,6 +72,7 @@
     </div>
     <!-- /.register-box -->
 @endsection
+
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>

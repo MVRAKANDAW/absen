@@ -451,9 +451,9 @@ a:focus {
  */
 .main-sidebar {
   position: absolute;
-  top: 15;
+  top: 5;
   left: 0;
-  padding-top: 50px;
+  padding-top: 60px;
   min-height: 100%;
   width: 230px;
   z-index: 810;

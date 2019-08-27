@@ -6019,6 +6019,7 @@ button.close {
 }
 .modal-title {
   margin: 0;
+  text-align: left;
   line-height: 1.42857143;
 }
 .modal-body {
